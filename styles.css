@@ -1,0 +1,792 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #d4af37;
+    --secondary-color: #8b7355;
+    --text-color: #333;
+    --light-bg: #fafafa;
+    --white: #ffffff;
+    --gold: #d4af37;
+    --dark-gold: #b8941f;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Hero Section */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.bride-name,
+.groom-name {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--gold);
+    margin: 1rem 0;
+    letter-spacing: 2px;
+}
+
+.ampersand {
+    font-size: 3rem;
+    color: var(--secondary-color);
+    margin: 1rem 0;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Save the Date Section */
+.save-date-section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: var(--white);
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 3rem;
+    letter-spacing: 3px;
+}
+
+.calendar-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.month-label {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+    font-weight: 500;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.calendar-day.highlight {
+    background: var(--gold);
+    color: var(--white);
+    border-color: var(--gold);
+    transform: scale(1.1);
+}
+
+.wedding-day-label {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* Couple Section */
+.couple-section {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.couple-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: center;
+}
+
+.groom-card,
+.bride-card {
+    padding: 3rem 2rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.role-title {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.name-title {
+    font-size: 2.5rem;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Love Story Section */
+.love-story-section {
+    padding: 5rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.love-story-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.subtitle {
+    font-size: 2rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+    text-align: justify;
+}
+
+/* Family Section */
+.family-section {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+}
+
+.family-container {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    text-align: center;
+}
+
+.bride-family,
+.groom-family {
+    padding: 2rem;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.family-title {
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+.family-names p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 0.5rem 0;
+}
+
+.couple-names-display {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.display-name {
+    font-size: 2rem;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Wedding Details Section */
+.wedding-details-section {
+    padding: 5rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.date-label {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.date-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.date-number {
+    font-size: 6rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+}
+
+.date-info {
+    text-align: left;
+}
+
+.date-month,
+.date-year {
+    font-size: 2rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+}
+
+.lunar-date {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+.venue-info {
+    margin-top: 3rem;
+}
+
+.venue-title {
+    font-size: 1.8rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.venue-address {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+    line-height: 1.8;
+}
+
+.direction-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.direction-btn:hover {
+    background: var(--dark-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Timeline Section */
+.timeline-section {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+    text-align: center;
+}
+
+.timeline-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    background: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-time {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.timeline-event {
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+/* Dress Code Section */
+.dress-code-section {
+    padding: 5rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+/* Album Section */
+.album-section {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+    text-align: center;
+}
+
+.album-subtitle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 600;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+.album-grid img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.album-grid img:hover {
+    transform: scale(1.05);
+}
+
+/* RSVP Section */
+.rsvp-section {
+    padding: 5rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.rsvp-subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-bottom: 3rem;
+    font-style: italic;
+}
+
+.rsvp-form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--light-bg);
+    padding: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+.rsvp-form {
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.radio-label:hover {
+    background: rgba(212, 175, 55, 0.1);
+}
+
+.radio-label input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.form-select {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    background: var(--white);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.form-select:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 5px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.submit-btn:hover {
+    background: var(--dark-gold);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Gift Section */
+.gift-section {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+    text-align: center;
+}
+
+/* Countdown Section */
+.countdown-section {
+    padding: 5rem 2rem;
+    background: var(--white);
+    text-align: center;
+}
+
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.countdown-item {
+    text-align: center;
+}
+
+.countdown-number {
+    font-size: 4rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    min-width: 100px;
+}
+
+.countdown-label {
+    font-size: 1rem;
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-separator {
+    font-size: 3rem;
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* Thank You Section */
+.thank-you-section {
+    padding: 5rem 2rem;
+    background: var(--light-bg);
+    text-align: center;
+}
+
+.thank-you-text {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.thank-you-title {
+    font-size: 3rem;
+    color: var(--gold);
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+/* Footer */
+.footer {
+    padding: 3rem 2rem;
+    background: var(--text-color);
+    color: var(--white);
+    text-align: center;
+}
+
+.footer-text {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.footer-bride-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--gold);
+}
+
+.footer-bride-info p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation: fadeIn 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--white);
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+.modal-content h2 {
+    font-size: 1.5rem;
+    color: var(--gold);
+    margin-bottom: 1rem;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.modal-thank-you {
+    font-size: 2rem;
+    color: var(--gold);
+    margin: 1rem 0;
+}
+
+.close-btn {
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    background: var(--gold);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.close-btn:hover {
+    background: var(--dark-gold);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bride-name,
+    .groom-name {
+        font-size: 2.5rem;
+    }
+
+    .ampersand {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .couple-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .family-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .date-number {
+        font-size: 4rem;
+    }
+
+    .date-month,
+    .date-year {
+        font-size: 1.5rem;
+    }
+
+    .countdown-number {
+        font-size: 2.5rem;
+        min-width: 70px;
+    }
+
+    .countdown-separator {
+        font-size: 2rem;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .rsvp-form-container {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-section {
+        min-height: 80vh;
+    }
+
+    .bride-name,
+    .groom-name {
+        font-size: 2rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+    }
+
+    .calendar-grid {
+        gap: 0.5rem;
+    }
+
+    .calendar-day {
+        font-size: 1rem;
+    }
+
+    .countdown-container {
+        gap: 0.5rem;
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+        min-width: 60px;
+    }
+
+    .countdown-separator {
+        font-size: 1.5rem;
+    }
+}
+
